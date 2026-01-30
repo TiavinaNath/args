@@ -3,9 +3,11 @@ package com.example.demo.env;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.example.demo.conf.FacadeIT;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 
+@Slf4j
 public class TestEnvVar extends FacadeIT {
   @Value("${orange.api.url}")
   private String orangeApiUrl;
