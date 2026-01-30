@@ -1,0 +1,3 @@
+\
+-Dorange.api.url="$ORANGE_API_URL" \
+-Dvola.api.key="$VOLA_API_KEY"
