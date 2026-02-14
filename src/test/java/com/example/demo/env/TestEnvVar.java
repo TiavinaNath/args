@@ -15,8 +15,11 @@ public class TestEnvVar extends FacadeIT {
   @Value("${VOLA_API_KEY}")
   private String apiKey;
 
+  @Value("${vola.api.url}")
+  private String apiUrl;
+
   @Test
-  void test_api_url() {
+  void test_orange_api_url() {
     var value = "azertyuiop/123456789/test-value";
     assertEquals(value, orangeApiUrl);
   }
@@ -31,5 +34,11 @@ public class TestEnvVar extends FacadeIT {
   void test_api_key() {
     var value = "vola/api/key/123456789";
     assertEquals(value, apiKey);
+  }
+
+  @Test
+  void test_api_url() {
+    var value = "vola/api/url/preprod";
+    assertEquals(value, apiUrl);
   }
 }
